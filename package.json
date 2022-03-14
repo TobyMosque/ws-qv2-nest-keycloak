@@ -1,0 +1,18 @@
+{
+    "private": true,
+    "workspaces": {
+      "packages": ["backend", "frontend-vite", "frontend-webpack"]
+    },
+    "scripts": {
+      "backend:dev": "yarn workspace backend build:dev",
+      "backend:build": "yarn workspace backend build",
+      "backend:start": "yarn workspace backend start",
+      "frontend:vt:dev": "yarn workspace frontend-vite dev",
+      "frontend:vt:prettier": "yarn workspace frontend-vite prettier",
+      "frontend:wp:dev": "yarn workspace frontend-webpack dev",
+      "frontend:wp:prettier": "yarn workspace frontend-webpack prettier",
+      "start": "yarn backend:start",
+      "dev": "concurrently \"yarn backend:dev\" \"yarn frontend:dev\"",
+      "postinstall": "yarn backend:build"
+    }
+  }
