@@ -4,8 +4,4 @@ url = https://github.com/TobyMosque/ws-qv2-nest-keycloak-backend.git
 
 [submodule "frontend-vite"]
 path = frontend-vite
-url = https://github.com/TobyMosque/ws-qv2-nest-keycloak-frontend-vite.git 
-
-[submodule "frontend-webpack"]
-path = frontend-webpack
-url = https://github.com/TobyMosque/ws-qv2-nest-keycloak-frontend-webpack.git
+url = https://github.com/TobyMosque/ws-qv2-nest-keycloak-frontend-vite.git
