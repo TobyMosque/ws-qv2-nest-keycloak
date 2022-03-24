@@ -1,18 +1,17 @@
 {
     "private": true,
     "workspaces": {
-      "packages": ["backend", "frontend-vite", "frontend-webpack"]
+      "packages": ["backend", "frontend", "api"]
     },
     "scripts": {
-      "backend:dev": "yarn workspace backend build:dev",
+      "backend:dev": "yarn workspace backend start:debug",
       "backend:build": "yarn workspace backend build",
-      "backend:start": "yarn workspace backend start",
-      "frontend:vt:dev": "yarn workspace frontend-vite dev",
-      "frontend:vt:prettier": "yarn workspace frontend-vite prettier",
-      "frontend:wp:dev": "yarn workspace frontend-webpack dev",
-      "frontend:wp:prettier": "yarn workspace frontend-webpack prettier",
+      "backend:start": "yarn workspace backend build:dev",
+      "frontend:dev": "yarn workspace frontend dev",
+      "frontend:prettier": "yarn workspace frontend prettier",
+      "api:build": "yarn workspace backend openapi && yarn workspace api build",
       "start": "yarn backend:start",
-      "dev": "concurrently \"yarn backend:dev\" \"yarn frontend:dev\"",
+      "dev": "concurrently \"yarn backend:start\" \"yarn frontend:dev\"",
       "postinstall": "yarn backend:build"
     }
   }
