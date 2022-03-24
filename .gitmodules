@@ -3,5 +3,5 @@ path = backend
 url = https://github.com/TobyMosque/ws-qv2-nest-keycloak-backend.git
 
 [submodule "frontend"]
-path = frontend
-url = https://github.com/TobyMosque/ws-qv2-nest-keycloak-frontend.git
+	path = frontend
+	url = https://github.com/TobyMosque/ws-qv2-nest-keycloak-frontend.git
