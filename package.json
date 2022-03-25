@@ -5,13 +5,14 @@
     },
     "scripts": {
       "backend:dev": "yarn workspace backend start:debug",
-      "backend:build": "yarn workspace backend build",
-      "backend:start": "yarn workspace backend build:dev",
+      "backend:build": "yarn workspace backend build:openapi",
+      "backend:build:api": "yarn backend:build && yarn api:build",
+      "backend:build:watch": "yarn workspace backend build:watch",
       "frontend:dev": "yarn workspace frontend dev",
       "frontend:prettier": "yarn workspace frontend prettier",
       "api:build": "yarn workspace backend openapi && yarn workspace api build",
       "start": "yarn backend:start",
-      "dev": "concurrently \"yarn backend:start\" \"yarn frontend:dev\"",
-      "postinstall": "yarn backend:build"
+      "dev": "concurrently \"yarn backend:build:watch\" \"yarn frontend:dev\"",
+      "postinstall": "yarn backend:build:api"
     }
   }
